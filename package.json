@@ -1,0 +1,27 @@
+{
+  "name": "smart-study-generator",
+  "version": "1.0.0",
+  "description": "AI-powered Smart Study Generator using IBM Granite",
+  "scripts": {
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "node --watch server/index.js",
+    "client": "cd client && npm run dev",
+    "install:all": "npm install && cd client && npm install",
+    "build": "cd client && npm run build",
+    "start": "node server/index.js"
+  },
+  "dependencies": {
+    "@ibm-cloud/watsonx-ai": "^1.1.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "express-fileupload": "^1.5.1",
+    "ibm-watson": "^9.1.0",
+    "multer": "^1.4.5-lts.1",
+    "pdf-parse": "^1.1.1",
+    "uuid": "^10.0.0"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
